@@ -23,7 +23,7 @@ public class Graph {
         for (int i = 0; i < n_vertices; i++) {
             for (int j = 0; j < n_vertices; j++) {
                 if (i != j && this.matrix[i][j] == 0) {
-                    this.matrix[i][j] = Integer.MAX_VALUE;
+                    this.matrix[i][j] = 9999;
                 }
             }
         }
@@ -48,6 +48,14 @@ public class Graph {
             str += centerCities.get(i)+"\n";
         }
         return str;
+    }
+
+    public void printCentersList(){
+       
+        for ( int i = 0 ; i < centerCities.size() ; i++ ){
+            System.out.println(centerCities.get(i));
+        }
+        
     }
 
     public void floydWharshall() {
@@ -101,6 +109,7 @@ public class Graph {
     public List<Integer> kCenter(int radius) {
         List<Integer> cities = getCities(this.matrix.length);
         int i = 0;
+        this.printCentersList();
         while (cities.isEmpty()) {
             int city = cities.get(i);
             centerCities.add(city);

@@ -15,7 +15,7 @@ public class Main {
     Graph graph;
 
     // create a new file object
-    File file = new File("./ORLib/pmed1.txt");
+    File file = new File("./ORLib/pmedteste.txt");
     // create an object of Scanner
     // associated with the file
     Scanner sc = new Scanner(file);
@@ -36,14 +36,14 @@ public class Main {
     // close scanner
     sc.close();
 
-    //System.out.println("Grafo instanciado: \n\n"+graph.toString());
+    System.out.println("Grafo instanciado: \n\n"+graph.toString());
     graph.correctInfiniteWays();
-   //System.out.println("Grafo de Distancias corrigidas: \n\n"+graph.toString());
+    System.out.println("Grafo de Distancias corrigidas: \n\n"+graph.toString());
     graph.floydWharshall();
-    //System.out.println("Grafo Depois de floyd Wharshall: \n\n"+graph.toString());
+    System.out.println("Grafo Depois de floyd Wharshall: \n\n"+graph.toString());
 
-    graph.findCities();
-    System.out.println("Busca por centros: \n\n"+graph.getCentersList());
+    //graph.findCities();
+    //System.out.println("Busca por centros: \n\n"+graph.getCentersList());
 
   }
 }
