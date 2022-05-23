@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import src.graph.GFG;
 import src.graph.Graph;
 
 class Main {
