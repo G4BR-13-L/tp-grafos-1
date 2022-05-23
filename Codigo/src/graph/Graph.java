@@ -2,21 +2,20 @@ package src.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class Graph {
     public int[][] matrix;
     public int n_vertices;
     public int k_centers;
-    List<Integer> cities;
-    List<Integer> centerCities;
+    public int maxDistance = 0;
 
     public Graph(int n_vertices, int k_centers) {
         this.matrix = new int[n_vertices][n_vertices];
         this.n_vertices = n_vertices;
         this.k_centers = k_centers;
-        centerCities = new ArrayList<>();
-        cities = new ArrayList <>();
     }
 
     public void correctInfiniteWays() {
@@ -42,22 +41,6 @@ public class Graph {
         return graphStrMatrix;
     }
 
-    public String getCentersList(){
-        String str = "";
-        for ( int i = 0 ; i < centerCities.size() ; i++ ){
-            str += centerCities.get(i)+"\n";
-        }
-        return str;
-    }
-
-    public void printCentersList(){
-       
-        for ( int i = 0 ; i < centerCities.size() ; i++ ){
-            System.out.println(centerCities.get(i));
-        }
-        
-    }
-
     public void floydWharshall() {
         for (int k = 0; k < n_vertices; k++) {
             for (int i = 0; i < n_vertices; i++) {
@@ -70,111 +53,107 @@ public class Graph {
         }
     }
 
-    public List<Integer> findCities() {
-        int radius = 1;
-        int[] dummy = new int[(this.matrix.length * this.matrix.length) + 1];
-        int ij = 0;
-        for (int i = 0; i < this.matrix.length; i++) {
-            for (int j = 0; j < this.matrix.length; j++) {
-                dummy[ij] = this.matrix[i][j];
-                ij++;
+    static int maxIndex(int[] dist, int n) {
+        int mi = 0;
+        for (int i = 0; i < n; i++) {
+            if (dist[i] > dist[mi])
+                mi = i;
+        }
+        return mi;
+    }
+
+    public void selectCenters() {
+        selectCenters(n_vertices, this.matrix, k_centers);
+    }
+
+    public void selectCenters(int n, int weights[][],
+            int k) {
+        int[] dist = new int[n];
+        ArrayList<Integer> centers = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            dist[i] = Integer.MAX_VALUE;
+        }
+        int max = 0;
+        int min = 0;
+        for (int i0 = 0; i0 < k; i0++) {
+            for (int i = 0; i < k; i++) {
+                centers.add(max);
+                for (int j = 0; j < n; j++) {
+                    if( dist[j] <  weights[max][j] ){
+                        dist[j] = Math.min(dist[j],
+                        weights[max][j]);
+                        min = j;
+                    }
+                }
+
+                max = maxIndex(dist, n);
+                int max_lightning = 0;
+                for (int r = 0; r < centers.size(); r++) {
+                    for (int s = 0; s < n_vertices; s++) {
+                        if (this.matrix[r][s] > this.matrix[min][s]) {
+                            max_lightning = r;
+                        }
+                    }
+                }
+                centers.remove(max_lightning);
+                centers.add(min);
             }
         }
-        Arrays.sort(dummy);
-        radius = dummy[dummy.length / 2];
-        return kCenter(radius);
+
+        max = maxIndex(dist, n);
+        maxDistance = dist[max];
+        for (int i = 0; i < centers.size(); i++) {
+            System.out.print(centers.get(i) + " ");
+        }
+        System.out.print("\n");
     }
 
-
-    public List<Integer> getCities(int n) {
-        List<Integer> cityList = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            cityList.add(i);
-        }
-        return cityList;
+    public void solve() {
+        solve(this.matrix, 30);
     }
 
-    public void removeAllCitiesAt2rRadius(List<Integer> cities, int radius, int city) {
-        for (int i = 0; i < this.matrix.length; i++) {
-            if (i < cities.size() && this.matrix[city][i] <= 2 * radius)
-                cities.remove(cities.get(i));
+    public void solve(int[][] graph, int k) {
+        boolean[] added = new boolean[graph.length];
+        List<Integer> nodes = new ArrayList<>();
+        added[0] = true;
+        nodes.add(0);
+        while (nodes.size() != k) {
+            int maxDisFromNode = Integer.MIN_VALUE;
+            int maxDisNodeToBeAdded = 0;
+            for (Integer node : nodes) {
+                int minDisFromNode = Integer.MAX_VALUE;
+                int minDisNodeToBeAdded = 0;
+                for (int i = 0; i < graph.length; i++) {
+                    if (!added[i] && graph[node][i] != 0 && graph[node][i] < minDisFromNode) {
+                        minDisFromNode = graph[node][i];
+                        minDisNodeToBeAdded = i;
+                    }
+                }
+                if (minDisFromNode > maxDisFromNode) {
+                    maxDisFromNode = minDisFromNode;
+                    maxDisNodeToBeAdded = minDisNodeToBeAdded;
+                }
+            }
+            added[maxDisNodeToBeAdded] = true;
+            nodes.add(maxDisNodeToBeAdded);
         }
-        int i = 0;
-        while (!cities.isEmpty()) {
-            centerCities.add(cities.remove(i));
-            i++;
+
+        int raioMax = 0;
+        int raioMin = Integer.MAX_VALUE;
+        for (Integer n : nodes) {
+            for (int j = 0; j < n_vertices; j++) {
+                if (this.matrix[n][j] > raioMax) {
+                    raioMax = this.matrix[n][j];
+                }
+                if (this.matrix[n][j] < raioMin && this.matrix[n][j] != 0) {
+                    raioMin = this.matrix[n][j];
+                }
+            }
         }
-    }
+        for (Integer n : nodes)
+            System.out.print(n + " ");
 
-    public List<Integer> kCenter(int radius) {
-        List<Integer> cities = getCities(this.matrix.length);
-        int i = 0;
-        this.printCentersList();
-        while (cities.isEmpty()) {
-            int city = cities.get(i);
-            centerCities.add(city);
-            removeAllCitiesAt2rRadius(cities, radius, city);
-            i++;
-        }
-        if (centerCities.size() <= k_centers)
-            return centerCities;
-        return kCenter(radius + 1);
-    }
-
-    
-    /*
-     * static int maxindex(int[] distances, int n) {
-     * int mi = 0;
-     * for (int i = 0; i < n; i++) {
-     * if (distances[i] > distances[mi])
-     * mi = i;
-     * }
-     * return mi;
-     * }
-     */
-
-    public void findMinimumKCenterDisntaces() {
-        /*
-         * int[] distances = new int[n_vertices];
-         * ArrayList<Integer> centers = new ArrayList<>();
-         * int max = 0;
-         * for (int i = 0; i < k_centers; i++) {
-         * centers.add(max);
-         * for (int j = 0; j < n_vertices; j++) {
-         * distances[j] = Math.min(distances[j], this.matrix[max][j]);
-         * }
-         * max = maxindex(distances, n_vertices);
-         * 
-         * }
-         * //System.out.println("Resultado:"+distances[max]);
-         * for (int i = 0; i < centers.size(); i++) {
-         * System.out.print(centers.get(i) + " ");
-         * }
-         * System.out.print("\n");
-         */
-
-        /*
-         * int minDistance = 0;
-         * int[] minimum_lightnings = new int[k_centers];
-         * for (int k = 0; k < k_centers; k++) {
-         * int minimum_n_lightning = Integer.MAX_VALUE;
-         * for (int i = 0; i < n_vertices; i++) {
-         * for (int j = 0; j < n_vertices; j++) {
-         * if( i != j ){
-         * if (this.matrix[i][j] < minimum_n_lightning) {
-         * minimum_n_lightning = this.matrix[i][j];
-         * }
-         * }
-         * }
-         * }
-         * minimum_lightnings[k] = minimum_n_lightning;
-         * }
-         * for ( int h = 0 ; h < k_centers ; h++ ){
-         * System.out.print(minimum_lightnings[h]+" | ");
-         * }
-         * System.out.println("0000");
-         */
-
+        System.out.println("RaioMax: " + raioMax + " - RaioMin: " + raioMin + "\n\n");
     }
 
 }

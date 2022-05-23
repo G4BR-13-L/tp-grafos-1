@@ -5,45 +5,54 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import src.graph.GFG;
 import src.graph.Graph;
 
-public class Main {
+class Main {
   public static void main(String[] args) throws FileNotFoundException {
     int vertices = 0;
     int arestas = 0;
     int k = 0;
     Graph graph;
+    int[] maxDistancesList = new int[40];
 
-    // create a new file object
-    File file = new File("./ORLib/pmedteste.txt");
-    // create an object of Scanner
-    // associated with the file
-    Scanner sc = new Scanner(file);
-    vertices = sc.nextInt();
-    arestas = sc.nextInt();
-    k = sc.nextInt();
-    System.out.println(" | " + vertices + " | " + arestas + " | " + k + " | ");
+    for (int instance = 0; instance < 1; instance++) {
+      File file = new File("./ORLib/pmed"+(instance+1)+".txt");
+      Scanner sc = new Scanner(file);
+      vertices = sc.nextInt();
+      arestas = sc.nextInt();
+      k = sc.nextInt();
+      System.out.println("Instancia: pmed"+(instance+1)+"| " + vertices + " | " + arestas + " | " + k + " |");
+      graph = new Graph(vertices, k);
+      
+      
+      while (sc.hasNext()) {
+        int i = sc.nextInt();
+        int j = sc.nextInt();
+        int weight = sc.nextInt();
+        graph.matrix[i- 1][j- 1] = weight;
+      }
 
-    graph = new Graph(vertices, k);
+      // close scanner
+      sc.close();
 
-    while (sc.hasNext()) {
-      int i = sc.nextInt();
-      int j = sc.nextInt();
-      int weight = sc.nextInt();
-      graph.matrix[i-1][j-1] = weight;
+      // System.out.println("Grafo instanciado: \n\n"+graph.toString());
+      graph.correctInfiniteWays();
+      // System.out.println("Grafo de Distancias corrigidas: \n\n"+graph.toString());
+      graph.floydWharshall();
+      //graph.selectCenters();
+      graph.selectCenters();
+      maxDistancesList[instance] = graph.maxDistance;
+     //System.out.println("Grafo: \n\n"+graph.toString());
+
     }
 
-    // close scanner
-    sc.close();
-
-    System.out.println("Grafo instanciado: \n\n"+graph.toString());
-    graph.correctInfiniteWays();
-    System.out.println("Grafo de Distancias corrigidas: \n\n"+graph.toString());
-    graph.floydWharshall();
-    System.out.println("Grafo Depois de floyd Wharshall: \n\n"+graph.toString());
-
-    //graph.findCities();
-    //System.out.println("Busca por centros: \n\n"+graph.getCentersList());
-
+    for ( int print = 0 ; print < maxDistancesList.length ; print++ ){
+      System.out.print(maxDistancesList[print]+", ");
+      if( print % 10 == 0 ){
+        System.out.println();
+      }
+    }
   }
+
 }
