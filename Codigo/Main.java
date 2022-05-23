@@ -16,13 +16,13 @@ class Main {
     Graph graph;
     int[] maxDistancesList = new int[40];
 
-    for (int instance = 0; instance < 1; instance++) {
+    for (int instance = 0; instance < maxDistancesList.length; instance++) {
       File file = new File("./ORLib/pmed"+(instance+1)+".txt");
       Scanner sc = new Scanner(file);
       vertices = sc.nextInt();
       arestas = sc.nextInt();
       k = sc.nextInt();
-      System.out.println("Instancia: pmed"+(instance+1)+"| " + vertices + " | " + arestas + " | " + k + " |");
+      //System.out.println("Instancia: pmed"+(instance+1)+"| " + vertices + " | " + arestas + " | " + k + " |");
       graph = new Graph(vertices, k);
       
       
@@ -41,17 +41,14 @@ class Main {
       // System.out.println("Grafo de Distancias corrigidas: \n\n"+graph.toString());
       graph.floydWharshall();
       //graph.selectCenters();
-      graph.selectCenters();
+      graph.selectCenters();;
       maxDistancesList[instance] = graph.maxDistance;
      //System.out.println("Grafo: \n\n"+graph.toString());
 
     }
 
     for ( int print = 0 ; print < maxDistancesList.length ; print++ ){
-      System.out.print(maxDistancesList[print]+", ");
-      if( print % 10 == 0 ){
-        System.out.println();
-      }
+      System.out.println("pmed"+(print+1)+": "+maxDistancesList[print]);
     }
   }
 

@@ -74,38 +74,28 @@ public class Graph {
             dist[i] = Integer.MAX_VALUE;
         }
         int max = 0;
-        int min = 0;
-        for (int i0 = 0; i0 < k; i0++) {
-            for (int i = 0; i < k; i++) {
-                centers.add(max);
-                for (int j = 0; j < n; j++) {
-                    if( dist[j] <  weights[max][j] ){
-                        dist[j] = Math.min(dist[j],
+
+        for (int i = 0; i < k; i++) {
+            centers.add(max);
+            for (int j = 0; j < n; j++) {
+                dist[j] = Math.min(dist[j],
                         weights[max][j]);
-                        min = j;
-                    }
-                }
 
-                max = maxIndex(dist, n);
-                int max_lightning = 0;
-                for (int r = 0; r < centers.size(); r++) {
-                    for (int s = 0; s < n_vertices; s++) {
-                        if (this.matrix[r][s] > this.matrix[min][s]) {
-                            max_lightning = r;
-                        }
-                    }
-                }
-                centers.remove(max_lightning);
-                centers.add(min);
             }
-        }
 
-        max = maxIndex(dist, n);
+            max = maxIndex(dist, n);
+        }
+        
+
+        
         maxDistance = dist[max];
-        for (int i = 0; i < centers.size(); i++) {
+        
+        // Exibição dos centros
+
+        /*for (int i = 0; i < centers.size(); i++) {
             System.out.print(centers.get(i) + " ");
         }
-        System.out.print("\n");
+        System.out.print("\n");*/
     }
 
     public void solve() {
