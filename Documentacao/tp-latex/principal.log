@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.5.22)  22 MAY 2022 22:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.5.22)  22 MAY 2022 23:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -621,151 +621,148 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout2 = `textos.aux'.
 
  (/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/textos.tex
-
-LaTeX Warning: Citation `manualpuc' on page 3 undefined on input line 18.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
 
  []
 
 
-LaTeX Warning: Citation `manualpuc' on page 3 undefined on input line 41.
+LaTeX Warning: Citation `manualpuc' on page 3 undefined on input line 51.
 
 [3
 
 ]
 
-LaTeX Warning: Reference `fig:figura1' on page 4 undefined on input line 56.
+LaTeX Warning: Reference `fig:figura1' on page 4 undefined on input line 66.
 
-<figuras/grade-comp.png, id=22, 688.07062pt x 432.11438pt>
+<figuras/grade-comp.png, id=23, 688.07062pt x 432.11438pt>
 File: figuras/grade-comp.png Graphic file (type png)
 <use figuras/grade-comp.png>
-Package pdftex.def Info: figuras/grade-comp.png  used on input line 62.
+Package pdftex.def Info: figuras/grade-comp.png  used on input line 72.
 (pdftex.def)             Requested size: 273.14923pt x 171.53716pt.
 
-LaTeX Warning: Citation `cap-livro' on page 4 undefined on input line 67.
+LaTeX Warning: Citation `cap-livro' on page 4 undefined on input line 77.
 
 
-LaTeX Warning: Reference `fig:tela1' on page 4 undefined on input line 75.
+LaTeX Warning: Reference `fig:tela1' on page 4 undefined on input line 85.
 
-<figuras/tela1.png, id=23, 519.44063pt x 323.70938pt>
+<figuras/tela1.png, id=24, 519.44063pt x 323.70938pt>
 File: figuras/tela1.png Graphic file (type png)
 <use figuras/tela1.png>
-Package pdftex.def Info: figuras/tela1.png  used on input line 82.
+Package pdftex.def Info: figuras/tela1.png  used on input line 92.
 (pdftex.def)             Requested size: 364.19667pt x 226.96053pt.
 
-LaTeX Warning: Citation `tela1' on page 4 undefined on input line 87.
+LaTeX Warning: Citation `tela1' on page 4 undefined on input line 97.
 
-<figuras/access.png, id=24, 637.63219pt x 475.7775pt>
+[4 </home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/figuras/grade-comp.png>]
+<figuras/access.png, id=28, 637.63219pt x 475.7775pt>
 File: figuras/access.png Graphic file (type png)
 <use figuras/access.png>
-Package pdftex.def Info: figuras/access.png  used on input line 100.
+Package pdftex.def Info: figuras/access.png  used on input line 110.
 (pdftex.def)             Requested size: 318.66948pt x 237.77925pt.
-[4 </home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/figuras/grade-comp.png>]
-
-LaTeX Warning: Citation `tese' on page 5 undefined on input line 105.
 
 
-LaTeX Warning: Reference `tab:tabela1' on page 5 undefined on input line 117.
+LaTeX Warning: Citation `tese' on page 5 undefined on input line 115.
 
 
-LaTeX Warning: Citation `monog-fabio' on page 5 undefined on input line 145.
+LaTeX Warning: Reference `tab:tabela1' on page 5 undefined on input line 127.
+
+
+LaTeX Warning: Citation `monog-fabio' on page 5 undefined on input line 155.
 
 [5 </home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/figuras/tela1.png> </home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/figuras/access.png>]
 
-LaTeX Warning: Reference `alg:rnagenerica' on page 6 undefined on input line 185.
+LaTeX Warning: Reference `alg:rnagenerica' on page 6 undefined on input line 195.
 
-
-Overfull \hbox (11.74713pt too wide) detected at line 230
+[6]
+Overfull \hbox (11.74713pt too wide) detected at line 240
 [][] 
  []
 
 
-LaTeX Warning: Citation `mestrado' on page 6 undefined on input line 233.
-
-[6]
-
-LaTeX Warning: Citation `manualpuc' on page 7 undefined on input line 246.
+LaTeX Warning: Citation `mestrado' on page 7 undefined on input line 243.
 
 
-LaTeX Warning: Citation `knuth' on page 7 undefined on input line 254.
-
-
-LaTeX Warning: Citation `artigo01' on page 7 undefined on input line 255.
-
-
-LaTeX Warning: Citation `dovzan:01' on page 7 undefined on input line 256.
+LaTeX Warning: Citation `manualpuc' on page 7 undefined on input line 256.
 
 [7]
 
-LaTeX Warning: Citation `cap-livro' on page 8 undefined on input line 257.
+LaTeX Warning: Citation `knuth' on page 8 undefined on input line 264.
 
 
-LaTeX Warning: Citation `knuth' on page 8 undefined on input line 258.
+LaTeX Warning: Citation `artigo01' on page 8 undefined on input line 265.
 
 
-LaTeX Warning: Citation `groupp' on page 8 undefined on input line 258.
+LaTeX Warning: Citation `dovzan:01' on page 8 undefined on input line 266.
 
 
-LaTeX Warning: Citation `congresso' on page 8 undefined on input line 259.
+LaTeX Warning: Citation `cap-livro' on page 8 undefined on input line 267.
 
 
-LaTeX Warning: Citation `cap-livro' on page 8 undefined on input line 259.
+LaTeX Warning: Citation `knuth' on page 8 undefined on input line 268.
 
 
-LaTeX Warning: Citation `habermas' on page 8 undefined on input line 282.
+LaTeX Warning: Citation `groupp' on page 8 undefined on input line 268.
 
 
-LaTeX Warning: Citation `groupp' on page 8 undefined on input line 294.
+LaTeX Warning: Citation `congresso' on page 8 undefined on input line 269.
 
 
-LaTeX Warning: Citation `manualpuc' on page 8 undefined on input line 304.
+LaTeX Warning: Citation `cap-livro' on page 8 undefined on input line 269.
+
+
+LaTeX Warning: Citation `habermas' on page 8 undefined on input line 292.
+
+
+LaTeX Warning: Citation `groupp' on page 8 undefined on input line 304.
 
 [8]
 
-LaTeX Warning: Citation `monog-fabio' on page 9 undefined on input line 308.
+LaTeX Warning: Citation `manualpuc' on page 9 undefined on input line 314.
 
 
-LaTeX Warning: Citation `mestrado' on page 9 undefined on input line 309.
+LaTeX Warning: Citation `monog-fabio' on page 9 undefined on input line 318.
 
 
-LaTeX Warning: Citation `tese' on page 9 undefined on input line 311.
+LaTeX Warning: Citation `mestrado' on page 9 undefined on input line 319.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 313.
+
+LaTeX Warning: Citation `tese' on page 9 undefined on input line 321.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 323.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
-LaTeX Warning: Citation `cap-livro' on page 9 undefined on input line 317.
+LaTeX Warning: Citation `cap-livro' on page 9 undefined on input line 327.
 
 
-LaTeX Warning: Citation `knuth' on page 9 undefined on input line 319.
+LaTeX Warning: Citation `knuth' on page 9 undefined on input line 329.
 
 
-LaTeX Warning: Citation `groupp' on page 9 undefined on input line 319.
+LaTeX Warning: Citation `groupp' on page 9 undefined on input line 329.
 
 
-LaTeX Warning: Citation `knuth' on page 9 undefined on input line 320.
+LaTeX Warning: Citation `knuth' on page 9 undefined on input line 330.
 
 
-LaTeX Warning: Citation `groupp' on page 9 undefined on input line 320.
+LaTeX Warning: Citation `groupp' on page 9 undefined on input line 330.
 
 
-LaTeX Warning: Citation `pmbok' on page 9 undefined on input line 322.
+LaTeX Warning: Citation `pmbok' on page 9 undefined on input line 332.
 
 
-LaTeX Warning: Citation `tela1' on page 9 undefined on input line 326.
+LaTeX Warning: Citation `tela1' on page 9 undefined on input line 336.
 
+[9]
 
-LaTeX Warning: Citation `biblia' on page 9 undefined on input line 338.
+LaTeX Warning: Citation `biblia' on page 10 undefined on input line 348.
 
-[9]) [10]
+) [10]
 No file principal.bbl.
 (/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.aux (/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/textos.aux))
 
@@ -782,13 +779,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  18421 strings out of 479304
  347993 string characters out of 5869779
- 736501 words of memory out of 5000000
+ 732501 words of memory out of 5000000
  35243 multiletter control sequences out of 15000+600000
  445944 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,103p,445b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.pdf (10 pages, 950765 bytes).
+Output written on /home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.pdf (10 pages, 952413 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream

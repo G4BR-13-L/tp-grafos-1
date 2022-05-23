@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex principal"] 1653269307 "principal.aux" "principal.bbl" "principal" 1653269307
-  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/textos.aux" 1653269307 5641 3887aba78f36355f15eeb84d77b518d0 ""
+["bibtex principal"] 1653271463 "principal.aux" "principal.bbl" "principal" 1653271463
+  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/textos.aux" 1653271462 5616 6b927db48e93fca0345b14d8a6ca6804 ""
   "/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1357081713 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1543183680 60064 0819ac8568f9a482510a46e3a8a6f605 ""
   "bibliografia.bib" 1506295608 5113 f5bf8c7d15bd64eb54cfb8b5342286f5 ""
-  "principal.aux" 1653269307 507 f03ccaefbeaaa5621ec18be3d1adcad6 "pdflatex"
+  "principal.aux" 1653271462 507 f03ccaefbeaaa5621ec18be3d1adcad6 "pdflatex"
   (generated)
-  "principal.bbl"
   "principal.blg"
-["pdflatex"] 1653269306 "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.tex" "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.pdf" "principal" 1653269306
+  "principal.bbl"
+["pdflatex"] 1653271461 "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.tex" "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.pdf" "principal" 1653271461
   "/etc/texmf/web2c/texmf.cnf" 1638754236 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.aux" 1653269306 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.aux" 1653271461 8 a94a2480d3289e625eea47cd1b285758 ""
   "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.tex" 1653269065 5292 587ae4b1dd371fe55b25bf5c49cf8bf7 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -192,11 +192,11 @@
   "principal.bbl" 0 -1 0 "bibtex principal"
   "principal.tex" 1653269065 5292 587ae4b1dd371fe55b25bf5c49cf8bf7 ""
   "textos.aux" 0 -1 0 "pdflatex"
-  "textos.tex" 1506295608 15744 9fdaac4ea81d63fad50793a1b83084bd ""
+  "textos.tex" 1653271459 16685 951eaff59f39f1a0e0f7605da1e83d97 ""
   (generated)
-  "textos.aux"
-  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.pdf"
   "principal.aux"
+  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.pdf"
+  "textos.aux"
+  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.log"
   "principal.pdf"
   "principal.log"
-  "/home/gabriel/Codes/tp-grafos-1/Documentacao/tp-latex/principal.log"
